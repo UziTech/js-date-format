@@ -34,7 +34,7 @@
   		.replace(/fff/g, addPadding(millisecond))
   		.replace(/ff/g, addPadding(centisecond))
   		.replace(/f/g, addPadding(decisecond))
-  		.replace(/tt/g, (hou >= 12? "pm" : "am"))
-  		.replace(/TT/g, (hou >= 12? "PM" : "AM"));
+  		.replace(/tt/g, (hour >= 12? "pm" : "am"))
+  		.replace(/TT/g, (hour >= 12? "PM" : "AM"));
   };
 })();
