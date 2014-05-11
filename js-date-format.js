@@ -31,7 +31,7 @@
   };
 
   Date.prototype.getLocale = function() {
-    return this.locale;
+    return this.locale || "en";
   };
   
   Date.prototype.getMonthName = function() {
@@ -54,15 +54,20 @@
     return Date.locales[this.locale].day_names_short[this.getDay()];
   };
   
+  Date.prototype.getDateSuffix = function() {
+    this.locale = this.locale || "en";
+    return Date.locales[this.locale].date_suffix[this.getDate()];
+  }
+  
   Date.locales = {
     en: {
       month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
       month_names_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       day_names: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       day_names_short: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      day_suffix: function(day){
-        var day10 = Math.floor(day / 10);
-        var day1 = day % 10;
+      date_suffix: function(date){
+        var day10 = Math.floor(date / 10);
+        var day1 = date % 10;
         if(day10 == 1 || day1 > 3 || day1 == 0) {
           return "th";
         } else if(day1 == 1) {
@@ -105,7 +110,7 @@
     var monthNameShort = this.getMonthNameShort();
     var dayName = this.getDayName();
     var dayNameShort = this.getDayNameShort();
-    var daySuffix = Date.locales[this.locale].day_suffix(day);
+    var dateSuffix = this.getDateSuffix();
     
     var replacements = {
       YYYY: year,
@@ -118,7 +123,7 @@
   		DDD: dayNameShort,
   		DD: addPadding(day, 2),
   		D: day,
-      S: daySuffix,
+      S: dateSuffix,
   		HH: addPadding(hour, 2),
   		H: hour,
   		hh: addPadding(hour12, 2),
