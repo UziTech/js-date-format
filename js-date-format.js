@@ -56,7 +56,7 @@
   
   Date.prototype.getDateSuffix = function() {
     this.locale = this.locale || "en";
-    return Date.locales[this.locale].date_suffix[this.getDate()];
+    return Date.locales[this.locale].date_suffix(this.getDate());
   }
   
   Date.locales = {
