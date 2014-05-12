@@ -7,35 +7,35 @@ adds the following methods to a date object:
 
 #### getMonthName()
 
-	Gets the month name. (eg. January)
+Gets the month name. (eg. January)
 
 #### getMonthNameShort()
 
-	Gets the abbreviated month name. (eg. Jan)
+Gets the abbreviated month name. (eg. Jan)
 
 #### getDayName()
 
-	Gets the day of the week name. (eg. Sunday)
+Gets the day of the week name. (eg. Sunday)
 
 #### getDayNameShort()
 
-	Gets the abbreviated day of the week name. (eg. Sun)
+Gets the abbreviated day of the week name. (eg. Sun)
 
 #### getDateSuffix()
 
-	Gets the date suffix for the day of the month. (eg. th)
+Gets the date suffix for the day of the month. (eg. th)
 
 #### getLocale()
 
-	Gets the locale for the month and day names. The default is "en".
+Gets the locale for the month and day names. The default is "en".
 
 #### setLocale(locale)
 
-	Sets the locale for the month and day names.
+Sets the locale for the month and day names.
 
 #### format(format_string)
 
-	Gets a string representation of the date object based on the format_string. (eg. "DDDD, MMMM DS h:mm TT" = Wednesday, January 1st 12:00 AM)
+Gets a string representation of the date object based on the format_string. (eg. "DDDD, MMMM DS h:mm TT" = Wednesday, January 1st 12:00 AM)
 
 Demo
 ====
