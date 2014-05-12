@@ -6,6 +6,7 @@
 </head>
 <body>
   <h1>Demo</h1>
+    Date = <script type="text/javascript">document.write((new Date).toString());</script>
   <h2>Options</h2>
   <ul>
     <li>YYYY: 4 digit year = <script type="text/javascript">document.write((new Date).format("YYYY"));</script></li>
@@ -38,15 +39,35 @@
     <li>Any other character will be copied to output /.* = <script type="text/javascript">document.write((new Date).format("/.*"));</script></li>
   </ul>
   <h3>Try it</h3>
-  <textarea id="pattern" placeholder="Pattern">DDDD, MMMM DS h:mm:ss.fff TT</textarea><br/>
+  var d = new Date("<input id="date" value="5/12/2014 11:15 AM" style="border: 0 none;font-size:12pt; font-family:serif;background-color: #ddd" />");<br />
+  d.format("<input id="pattern" value="DDDD, DS 'of' MMMM YYYY, h:mm:ss.fff TT" style="border: 0 none;font-size:12pt; font-family:serif;background-color:#ddd" />");<br/>
+  <hr />
+  <div>Output:</div>
   <textarea id="format" placeholder="Format" readonly></textarea><br/>
   <button type="button" onclick="formatPattern();">Submit</button>
   <script type="text/javascript">
+    var pattern = document.getElementById("pattern");
+    var date = document.getElementById("date");
+    date.onkeyup = pattern.onkeyup = function(){
+      var span = document.createElement("span");
+      span.innerHTML = this.value;
+      document.body.appendChild(span);
+      this.style.width = (span.offsetWidth + 2) + "px";
+      document.body.removeChild(span);
+    };
+    pattern.onkeyup();
+    date.onkeyup();
     function formatPattern(){
-      var d = new Date();
       var pattern = document.getElementById("pattern");
       var format = document.getElementById("format");
-      format.value = d.format(pattern.value);
+      var date = document.getElementById("date");
+      var d = new Date(date.value);
+      if(isNaN(d.getTime()))
+      {
+        format.value = "Invalid Date";
+      } else {
+        format.value = d.format(pattern.value);
+      }
     };
     formatPattern();
   </script>
