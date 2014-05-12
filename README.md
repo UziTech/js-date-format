@@ -5,31 +5,31 @@ Add format method to Date object in javascript to allow string formatting
 
 adds the following methods to a date object:
 
-#### getMonthName()
+#### getMonthName([language])
 
-Gets the month name. (eg. January)
+Gets the month name in the specified language. If no language is specified it will default to "en". (eg. January)
 
-#### getMonthNameShort()
+#### getMonthNameShort([language])
 
-Gets the abbreviated month name. (eg. Jan)
+Gets the abbreviated month name in the specified language. If no language is specified it will default to "en". (eg. Jan)
 
-#### getDayName()
+#### getDayName([language])
 
-Gets the day of the week name. (eg. Sunday)
+Gets the day of the week name in the specified language. If no language is specified it will default to "en". (eg. Sunday)
 
-#### getDayNameShort()
+#### getDayNameShort([language])
 
-Gets the abbreviated day of the week name. (eg. Sun)
+Gets the abbreviated day of the week name in the specified language. If no language is specified it will default to "en". (eg. Sun)
 
-#### getDateSuffix()
+#### getDateSuffix([language])
 
-Gets the date suffix for the day of the month. (eg. th)
+Gets the date suffix for the day of the month in the specified language. If no language is specified it will default to "en". (eg. th)
 
 #### getLocale()
 
 Gets the locale for the month and day names. The default is "en".
 
-#### setLocale(locale)
+#### setLocale(language)
 
 Sets the locale for the month and day names.
 
