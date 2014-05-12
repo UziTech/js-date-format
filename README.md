@@ -40,4 +40,4 @@ Gets a string representation of the date object based on the format_string. (eg.
 Demo
 ====
 
-download zip and open js-date-format.html to try a demo
+go to http://uzitech.com/files/dateformat.php for a demo or download the zip and open js-date-format.html
