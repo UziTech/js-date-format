@@ -34,29 +34,54 @@
     return this.locale || "en";
   };
   
-  Date.prototype.getMonthName = function() {
-    this.locale = this.locale || "en";
-    return Date.locales[this.locale].month_names[this.getMonth()];
+  Date.prototype.getMonthName = function(lang) {
+    var locale = "en";
+    if(lang && lang in Date.locales){
+      locale = lang;
+    } else if(this.locale && this.locale in Date.locales){
+      locale = this.locale
+    }
+    return Date.locales[locale].month_names[this.getMonth()];
   };
 
-  Date.prototype.getMonthNameShort = function() {
-    this.locale = this.locale || "en";
-    return Date.locales[this.locale].month_names_short[this.getMonth()];
+  Date.prototype.getMonthNameShort = function(lang) {
+    var locale = "en";
+    if(lang && lang in Date.locales){
+      locale = lang;
+    } else if(this.locale && this.locale in Date.locales){
+      locale = this.locale
+    }
+    return Date.locales[locale].month_names_short[this.getMonth()];
   };
 
-  Date.prototype.getDayName = function() {
-    this.locale = this.locale || "en";
-    return Date.locales[this.locale].day_names[this.getDay()];
+  Date.prototype.getDayName = function(lang) {
+    var locale = "en";
+    if(lang && lang in Date.locales){
+      locale = lang;
+    } else if(this.locale && this.locale in Date.locales){
+      locale = this.locale
+    }
+    return Date.locales[locale].day_names[this.getDay()];
   };
 
-  Date.prototype.getDayNameShort = function() {
-    this.locale = this.locale || "en";
-    return Date.locales[this.locale].day_names_short[this.getDay()];
+  Date.prototype.getDayNameShort = function(lang) {
+    var locale = "en";
+    if(lang && lang in Date.locales){
+      locale = lang;
+    } else if(this.locale && this.locale in Date.locales){
+      locale = this.locale
+    }
+    return Date.locales[locale].day_names_short[this.getDay()];
   };
   
-  Date.prototype.getDateSuffix = function() {
-    this.locale = this.locale || "en";
-    return Date.locales[this.locale].date_suffix(this.getDate());
+  Date.prototype.getDateSuffix = function(lang) {
+    var locale = "en";
+    if(lang && lang in Date.locales){
+      locale = lang;
+    } else if(this.locale && this.locale in Date.locales){
+      locale = this.locale
+    }
+    return Date.locales[locale].date_suffix(this.getDate());
   }
   
   Date.locales = {
@@ -94,18 +119,18 @@
       return negative + (zeros + Math.abs(value).toString()).slice(-length);
     };
 
-		var year = this.getFullYear();
-		var month = this.getMonth() + 1;
-		var day = this.getDate();
-		var hour = this.getHours();
+    var year = this.getFullYear();
+    var month = this.getMonth() + 1;
+    var day = this.getDate();
+    var hour = this.getHours();
     var hour12 = ((hour > 12)? hour - 12 : ((hour < 1)? 12 : hour));
-		var minute = this.getMinutes();
-		var second = this.getSeconds();
-		var millisecond = this.getMilliseconds();
-		var decisecond = Math.floor(millisecond / 100);
-		var centisecond = Math.floor(millisecond / 10);
+    var minute = this.getMinutes();
+    var second = this.getSeconds();
+    var millisecond = this.getMilliseconds();
+    var decisecond = Math.floor(millisecond / 100);
+    var centisecond = Math.floor(millisecond / 10);
     var offsetHour = Math.floor(-this.getTimezoneOffset() / 60);
-		var offsetMinutes = -this.getTimezoneOffset() % 60;
+    var offsetMinutes = -this.getTimezoneOffset() % 60;
     var monthName = this.getMonthName();
     var monthNameShort = this.getMonthNameShort();
     var dayName = this.getDayName();
