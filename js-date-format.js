@@ -114,7 +114,7 @@
     
     var replacements = {
       YYYY: year,
-  		YY: year - 2000,
+  		YY: year % 100,
   		MMMM: monthName,
   		MMM: monthNameShort,
   		MM: addPadding(month, 2),
