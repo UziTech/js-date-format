@@ -52,27 +52,27 @@ Format Options
 - DD: Day of the month 01-31
 - D: Day of the month 1-31
 - S: Day of the month suffix (st|nd|rd|th)
-HH: Hours 00-23
-H: Hours 0-23
-hh: Hours 01-12
-h: Hours 1-12
-mm: Minutes 00-59
-m: Minutes 0-59
-ss: Seconds 00-59
-s: Seconds 0-59
-f: Tenths of a second
-ff: Hundredths of a second
-fff: Thousandths of a second
-tt: am/pm
-TT: AM/PM
-zzzz: timezone
-zzz: timezone
-zz: timezone
-z: timezone
-": Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
-': Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
-\: Copies next character to output
-Any other character will be copied to output
+- HH: Hours 00-23
+- H: Hours 0-23
+- hh: Hours 01-12
+- h: Hours 1-12
+- mm: Minutes 00-59
+- m: Minutes 0-59
+- ss: Seconds 00-59
+- s: Seconds 0-59
+- f: Tenths of a second
+- ff: Hundredths of a second
+- fff: Thousandths of a second
+- tt: am/pm
+- TT: AM/PM
+- zzzz: timezone
+- zzz: timezone
+- zz: timezone
+- z: timezone
+- ": Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
+- ': Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
+- \: Copies next character to output
+- Any other character will be copied to output
 
 Demo
 ====
