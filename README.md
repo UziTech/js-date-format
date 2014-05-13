@@ -41,8 +41,8 @@ Format Options
 ==============
 
 
--YYYY: 4 digit yeay
--YY: 2 digit year
+*YYYY: 4 digit yeay
+*YY: 2 digit year
 -MMMM: Month name
 -MMM: Month name abbreviation
 -MM: Month 01-12
