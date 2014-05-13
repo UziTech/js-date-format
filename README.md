@@ -41,17 +41,17 @@ Format Options
 ==============
 
 
-YYYY: 4 digit yeay
-YY: 2 digit year
-MMMM: Month name
-MMM: Month name abbreviation
-MM: Month 01-12
-M: Month 1-12
-DDDD: Day of the week name
-DDD: Day of the week name abbreviation
-DD: Day of the month 01-31
-D: Day of the month 1-31
-S: Day of the month suffix (st|nd|rd|th)
+- YYYY: 4 digit yeay
+- YY: 2 digit year
+- MMMM: Month name
+- MMM: Month name abbreviation
+- MM: Month 01-12
+- M: Month 1-12
+- DDDD: Day of the week name
+- DDD: Day of the week name abbreviation
+- DD: Day of the month 01-31
+- D: Day of the month 1-31
+- S: Day of the month suffix (st|nd|rd|th)
 HH: Hours 00-23
 H: Hours 0-23
 hh: Hours 01-12
