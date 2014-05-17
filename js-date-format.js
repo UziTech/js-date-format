@@ -118,54 +118,105 @@
       }
       return negative + (zeros + Math.abs(value).toString()).slice(-length);
     };
-
-    var year = this.getFullYear();
-    var month = this.getMonth() + 1;
-    var day = this.getDate();
-    var hour = this.getHours();
-    var hour12 = ((hour > 12)? hour - 12 : ((hour < 1)? 12 : hour));
-    var minute = this.getMinutes();
-    var second = this.getSeconds();
-    var millisecond = this.getMilliseconds();
-    var decisecond = Math.floor(millisecond / 100);
-    var centisecond = Math.floor(millisecond / 10);
-    var offsetHour = Math.floor(-this.getTimezoneOffset() / 60);
-    var offsetMinutes = -this.getTimezoneOffset() % 60;
-    var monthName = this.getMonthName();
-    var monthNameShort = this.getMonthNameShort();
-    var dayName = this.getDayName();
-    var dayNameShort = this.getDayNameShort();
-    var dateSuffix = this.getDateSuffix();
     
     var replacements = {
-      YYYY: year,
-  		YY: year % 100,
-  		MMMM: monthName,
-  		MMM: monthNameShort,
-  		MM: addPadding(month, 2),
-  		M: month,
-  		DDDD: dayName,
-  		DDD: dayNameShort,
-  		DD: addPadding(day, 2),
-  		D: day,
-      S: dateSuffix,
-  		HH: addPadding(hour, 2),
-  		H: hour,
-  		hh: addPadding(hour12, 2),
-  		h: hour12,
-  		mm: addPadding(minute, 2),
-  		m: minute,
-  		ss: addPadding(second, 2),
-  		s: second,
-  		fff: addPadding(millisecond, 3),
-  		ff: addPadding(centisecond, 2),
-  		f: decisecond,
-  		zzzz: addPadding(offsetHour, 2) + ":" + addPadding(offsetMinutes, 2),
-  		zzz: offsetHour + ":" + addPadding(offsetMinutes, 2),
-  		zz: addPadding(offsetHour, 2),
-  		z: offsetHour,
-  		tt: (hour >= 12? "pm" : "am"),
-  		TT: (hour >= 12? "PM" : "AM")
+			date: this,
+      YYYY: function(){
+							return this.date.getFullYear();
+						},
+  		  YY: function(){
+							return this.date.getFullYear() % 100;
+						},
+  		MMMM: function(){
+							return this.date.getMonthName();
+						},
+  		 MMM: function(){
+							return this.date.getMonthNameShort();
+						},
+  		  MM: function(){
+							return addPadding((this.date.getMonth() + 1), 2);
+						},
+  		   M: function(){
+							return this.date.getMonth() + 1;
+						},
+  		DDDD: function(){
+							return this.date.getDayName();
+						},
+  		 DDD: function(){
+							return this.date.getDayNameShort();
+						},
+  		  DD: function(){
+							return addPadding(this.date.getDate(), 2);
+						},
+  		   D: function(){
+							return this.date.getDate();
+						},
+         S: function(){
+							return this.date.getDateSuffix();
+						},
+  		  HH: function(){
+							return addPadding(this.date.getHours(), 2);
+						},
+  		   H: function(){
+							return this.date.getHours();
+						},
+  		  hh: function(){
+							var hour = this.date.getHours();
+							if(hour > 12){
+								hour -= 12;
+							} else if(hour < 1) {
+								hour = 12;
+							}
+							return addPadding(hour, 2);
+						},
+  		   h: function(){
+							var hour = this.date.getHours();
+							if(hour > 12){
+								hour -= 12;
+							} else if(hour < 1) {
+								hour = 12;
+							}
+							return hour;
+						},
+  		  mm: function(){
+							return addPadding(this.date.getMinutes(), 2);
+						},
+  		   m: function(){
+							return this.date.getMinutes();
+						},
+  		  ss: function(){
+							return addPadding(this.date.getSeconds(), 2);
+						},
+  		   s: function(){
+							return this.date.getSeconds();
+						},
+  		 fff: function(){
+							return addPadding(this.date.getMilliseconds(), 3);
+						},
+  		  ff: function(){
+							return addPadding(Math.floor(this.date.getMilliseconds() / 10), 2);
+						},
+  		   f: function(){
+							return Math.floor(this.date.getMilliseconds() / 100);
+						},
+  		zzzz: function(){
+							return addPadding(Math.floor(-this.date.getTimezoneOffset() / 60), 2) + ":" + addPadding(-this.date.getTimezoneOffset() % 60, 2);
+						},
+  		 zzz: function(){
+							return Math.floor(-this.date.getTimezoneOffset() / 60) + ":" + addPadding(-this.date.getTimezoneOffset() % 60, 2);
+						},
+  		  zz: function(){
+							return addPadding(Math.floor(-this.date.getTimezoneOffset() / 60), 2);
+						},
+  		   z: function(){
+							return Math.floor(-this.date.getTimezoneOffset() / 60);
+						},
+  		  tt: function(){
+							return (this.date.getHours() >= 12? "pm" : "am");
+						},
+  		  TT: function(){
+							return (this.date.getHours() >= 12? "PM" : "AM");
+						}
     };
     
     
@@ -203,7 +254,7 @@
         var foundMatch = false;
         for(var i = formatString.length; i > 0; i--) {
           if(formatString.substring(0, i) in replacements) {
-            formats.push(replacements[formatString.substring(0, i)]);
+            formats.push(replacements[formatString.substring(0, i)]());
             formatString = formatString.substring(i);
             foundMatch = true;
             break;
