@@ -71,7 +71,7 @@ Format Options
 - z: timezone
 - ": Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
 - ': Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
-- \: Copies next character to output
+- \\: Copies next character to output
 - Any other character will be copied to output
 
 Demo
