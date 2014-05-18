@@ -91,7 +91,7 @@
 		} else if (this.locale && this.locale in Date.locales) {
 			locale = this.locale
 		}
-		return Date.locales[locale].meridiem(this.getHours(), isLower);
+		return Date.locales[locale].meridiem(this.getHours(), this.getMinutes(), isLower);
 	}
 	/* languages from http://momentjs.com */
 	Date.locales = {
@@ -770,7 +770,7 @@
 				return "";
 			}
 		},
-		"": {
+		"ml": {
 			month_names: 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split("_"),
 			month_names_short: 'ജനു._ഫെബ്രു._മാർ._ഏപ്രി._മേയ്_ജൂൺ_ജൂലൈ._ഓഗ._സെപ്റ്റ._ഒക്ടോ._നവം._ഡിസം.'.split("_"),
 			day_names: 'ഞായറാഴ്ച_തിങ്കളാഴ്ച_ചൊവ്വാഴ്ച_ബുധനാഴ്ച_വ്യാഴാഴ്ച_വെള്ളിയാഴ്ച_ശനിയാഴ്ച'.split("_"),
@@ -787,20 +787,8 @@
 				} else {
 					return "രാത്രി";
 				}
-			}
-			date_suffix: function (date) {
-				return "";
-			}
-		},
-		"": {
-			month_names: [],
-			month_names_short: [],
-			day_names: [],
-			day_names_short: [],
-			date_suffix: function (date) {
-				return "";
 			},
-			meridiem: function (hour, minute, isLower) {
+			date_suffix: function (date) {
 				return "";
 			}
 		},
