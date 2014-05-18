@@ -12,7 +12,7 @@
 </style>
 <script type="text/javascript" src="js-date-format.js"></script>
 <script type="text/javascript">
-function test(date, unit, format, start, end, test){
+function testFormat(date, unit, format, start, end, test){
   var passed = true;
   document.write("<p>" + format + " " + start + "-" + end + ": ");
   for(var i = start; i <= end; i++) {
@@ -34,47 +34,63 @@ function test(date, unit, format, start, end, test){
   }
   document.write("</p>");
 }
+function testMethod(date, method, value, expected, test){
+	var d;
+  document.write("<p>set" + method + "(" + value + "): ");
+	if(date == null){
+		d = new Date();
+	} else {
+		d = new Date(date);
+	}
+	d["set" + method](value);
+	if(test(d) === expected) {
+    document.write("<span class='passed'>Passed!</span>");
+	} else {
+		document.write("<br/><span class='failed'>failed: '" + test(d) + "' !== '" + expected + "'</span>");
+  }
+  document.write("</p>");
+}
 </script>
 </head>
 <body>
   <h1>Tests</h1>
   <script type="text/javascript">
-    test(null, "Year", "YYYY", 1900, 2100, function(i){
+    testFormat(null, "Year", "YYYY", 1900, 2100, function(i){
       return String(i); 
     });
-    test(null, "Year", "YY", 1900, 2100, function(i){
+    testFormat(null, "Year", "YY", 1900, 2100, function(i){
       return String(i % 100) 
     });
-    test(null, "Month", "M", 0, 11, function(i){
+    testFormat(null, "Month", "M", 0, 11, function(i){
       return String(i + 1);
     });
-    test(null, "Month", "MM", 0, 11, function(i){
+    testFormat(null, "Month", "MM", 0, 11, function(i){
       i = i + 1;
       return String((i < 10)? "0" + i : i);
     });
-    test(null, "Month", "MMM", 0, 11, function(i){
+    testFormat(null, "Month", "MMM", 0, 11, function(i){
       return Date.locales.en.month_names_short[i];
     });
-    test(null, "Month", "MMMM", 0, 11, function(i){
+    testFormat(null, "Month", "MMMM", 0, 11, function(i){
       return Date.locales.en.month_names[i];
     });
-    test("1/1/2014", "Date", "D", 1, 31, function(i){
+    testFormat("1/1/2014", "Date", "D", 1, 31, function(i){
       return String(i);
     });
-    test("1/1/2014", "Date", "DD", 1, 31, function(i){
+    testFormat("1/1/2014", "Date", "DD", 1, 31, function(i){
       return String((i < 10)? "0" + i : i);
     });
-    test("1/1/2014", "Date", "DDD", 1, 31, function(i){
+    testFormat("1/1/2014", "Date", "DDD", 1, 31, function(i){
       var d = new Date("1/1/2014");
       d.setDate(i);
       return Date.locales.en.day_names_short[d.getDay()];
     });
-    test("1/1/2014", "Date", "DDDD", 1, 31, function(i){
+    testFormat("1/1/2014", "Date", "DDDD", 1, 31, function(i){
       var d = new Date("1/1/2014");
       d.setDate(i);
       return Date.locales.en.day_names[d.getDay()];
     });
-    test("1/1/2014", "Date", "S", 1, 31, function(i){
+    testFormat("1/1/2014", "Date", "S", 1, 31, function(i){
       var suffix = "";
       var i10 = Math.floor(i/10);
       var i1 = i % 10;
@@ -98,13 +114,13 @@ function test(date, unit, format, start, end, test){
       }
       return suffix;
     });
-    test(null, "Hours", "H", 0, 23, function(i){
+    testFormat(null, "Hours", "H", 0, 23, function(i){
       return String(i);
     });
-    test(null, "Hours", "HH", 0, 23, function(i){
+    testFormat(null, "Hours", "HH", 0, 23, function(i){
       return String((i < 10)? "0" + i : i);
     });
-    test(null, "Hours", "h", 0, 23, function(i){
+    testFormat(null, "Hours", "h", 0, 23, function(i){
       if(i == 0) {
         i = 12
       } else if(i > 12) {
@@ -112,7 +128,7 @@ function test(date, unit, format, start, end, test){
       }
       return String(i);
     });
-    test(null, "Hours", "hh", 0, 23, function(i){
+    testFormat(null, "Hours", "hh", 0, 23, function(i){
       if(i == 0) {
         i = 12
       } else if(i > 12) {
@@ -120,56 +136,70 @@ function test(date, unit, format, start, end, test){
       }
       return String((i < 10)? "0" + i : i);
     });
-    test(null, "Minutes", "m", 0, 59, function(i){
+    testFormat(null, "Minutes", "m", 0, 59, function(i){
       return String(i);
     });
-    test(null, "Minutes", "mm", 0, 59, function(i){
+    testFormat(null, "Minutes", "mm", 0, 59, function(i){
       return String((i < 10)? "0" + i : i);
     });
-    test(null, "Seconds", "s", 0, 59, function(i){
+    testFormat(null, "Seconds", "s", 0, 59, function(i){
       return String(i);
     });
-    test(null, "Seconds", "ss", 0, 59, function(i){
+    testFormat(null, "Seconds", "ss", 0, 59, function(i){
       return String((i < 10)? "0" + i : i);
     });
-    test(null, "Milliseconds", "f", 0, 999, function(i){
+    testFormat(null, "Milliseconds", "f", 0, 999, function(i){
       return String(Math.floor(i / 100));
     });
-    test(null, "Milliseconds", "ff", 0, 999, function(i){
+    testFormat(null, "Milliseconds", "ff", 0, 999, function(i){
       var f = Math.floor(i / 10);
       return String(f < 10? "0" + f : f);
     });
-    test(null, "Milliseconds", "fff", 0, 999, function(i){
+    testFormat(null, "Milliseconds", "fff", 0, 999, function(i){
       return String(i < 10? "00" + i : (i < 100? "0" + i : i));
     });
-    test(null, null, "z", 0, 0, function(i){
+    testFormat(null, null, "z", 0, 0, function(i){
       var z = (new Date()).getTimezoneOffset();
       var zh = -Math.floor(z / 60);
       return String(zh);
     });
-    test(null, null, "zz", 0, 0, function(i){
+    testFormat(null, null, "zz", 0, 0, function(i){
       var z = (new Date()).getTimezoneOffset();
       var zh = -Math.floor(z / 60);
       return String((zh < 0? "-" : "") + (Math.abs(zh) < 10? "0" : "") + Math.abs(zh));
     });
-    test(null, null, "zzz", 0, 0, function(i){
+    testFormat(null, null, "zzz", 0, 0, function(i){
       var z = (new Date()).getTimezoneOffset();
       var zh = -Math.floor(z / 60);
       var zm = Math.abs(z % 60);
       return String(zh + ":" + (zm < 10? "0" : "") + zm);
     });
-    test(null, null, "zzzz", 0, 0, function(i){
+    testFormat(null, null, "zzzz", 0, 0, function(i){
       var z = (new Date()).getTimezoneOffset();
       var zh = -Math.floor(z / 60);
       var zm = Math.abs(z % 60);
       return String((zh < 0? "-" : "") + (Math.abs(zh) < 10? "0" : "") + Math.abs(zh) + ":" + (zm < 10? "0" : "") + zm);
     });
-    test(null, "Hours", "tt", 0, 23, function(i){
+    testFormat(null, "Hours", "tt", 0, 23, function(i){
       return (i < 12? "am" : "pm");
     });
-    test(null, "Hours", "TT", 0, 23, function(i){
+    testFormat(null, "Hours", "TT", 0, 23, function(i){
       return (i < 12? "AM" : "PM");
     });
+    testFormat(null, "Hours", "TT", 0, 23, function(i){
+      return (i < 12? "AM" : "PM");
+    });
+		testMethod(null, "Locale", "eo", "A.T.M.", function(d){
+			d.setHours(1);
+			return d.getMeridiem(false);
+		});
+		testMethod(null, "Locale", "eo", "a.t.m.", function(d){
+			d.setHours(1);
+			return d.getMeridiem(true);
+		});
+		testMethod(null, "Locale", "eo", "a", function(d){
+			return d.getDateSuffix();
+		});
   </script>
 </body>
 </html>

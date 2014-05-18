@@ -115,7 +115,7 @@
 					return "th";
 				}
 			},
-			meridiem: function (hour, minute, isLower) {
+			meridiem : function (hour, minute, isLower) {
 				if (hour < 12) {
 					return isLower ? "am" : "AM";
 				} else {
@@ -131,7 +131,7 @@
 			date_suffix: function (date) {
 				return "";
 			},
-			meridiem: function (hour, minute, isLower) {
+			meridiem : function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -296,8 +296,8 @@
 			date_suffix: function (date) {
 				return "η";
 			},
-			meridiem: function (hours, isLower) {
-				if (hours > 11) {
+			meridiem: function (hour, minute, isLower) {
+				if (hour > 11) {
 					return isLower ? 'μμ' : 'ΜΜ';
 				} else {
 					return isLower ? 'πμ' : 'ΠΜ';
@@ -397,7 +397,7 @@
 				return "a";
 			},
 			meridiem: function (hour, minute, isLower) {
-				if (hours < 12) {
+				if (hour < 12) {
 					return isLower ? 'a.t.m.' : 'A.T.M.';
 				} else {
 					return isLower ? 'p.t.m.' : 'P.T.M.';
@@ -567,8 +567,8 @@
 			month_names_short: "jan_feb_márc_ápr_máj_jún_júl_aug_szept_okt_nov_dec".split("_"),
 			day_names: "vasárnap_hétfő_kedd_szerda_csütörtök_péntek_szombat".split("_"),
 			day_names_short: "vas_hét_kedd_sze_csüt_pén_szo".split("_"),
-			meridiem: function (hours, minutes, isLower) {
-				if (hours < 12) {
+			meridiem: function (hour, minute, isLower) {
+				if (hour < 12) {
 					return isLower === true ? 'de' : 'DE';
 				} else {
 					return isLower === true ? 'du' : 'DU';
@@ -603,12 +603,12 @@
 			month_names_short: "Jan_Feb_Mar_Apr_Mei_Jun_Jul_Ags_Sep_Okt_Nov_Des".split("_"),
 			day_names: "Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu".split("_"),
 			day_names_short: "Min_Sen_Sel_Rab_Kam_Jum_Sab".split("_"),
-			meridiem: function (hours, minutes, isLower) {
-				if (hours < 11) {
+			meridiem: function (hour, minute, isLower) {
+				if (hour < 11) {
 					return 'pagi';
-				} else if (hours < 15) {
+				} else if (hour < 15) {
 					return 'siang';
-				} else if (hours < 19) {
+				} else if (hour < 19) {
 					return 'sore';
 				} else {
 					return 'malam';
@@ -819,12 +819,12 @@
 			month_names_short: "Jan_Feb_Mac_Apr_Mei_Jun_Jul_Ogs_Sep_Okt_Nov_Dis".split("_"),
 			day_names: "Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu".split("_"),
 			day_names_short: "Ahd_Isn_Sel_Rab_Kha_Jum_Sab".split("_"),
-			meridiem: function (hours, minutes, isLower) {
-				if (hours < 11) {
+			meridiem: function (hour, minute, isLower) {
+				if (hour < 11) {
 					return 'pagi';
-				} else if (hours < 15) {
+				} else if (hour < 15) {
 					return 'tengahari';
-				} else if (hours < 19) {
+				} else if (hour < 19) {
 					return 'petang';
 				} else {
 					return 'malam';
@@ -991,8 +991,8 @@
 			month_names_short: "Jan_Shk_Mar_Pri_Maj_Qer_Kor_Gus_Sht_Tet_Nën_Dhj".split("_"),
 			day_names: "E Diel_E Hënë_E Martë_E Mërkurë_E Enjte_E Premte_E Shtunë".split("_"),
 			day_names_short: "Die_Hën_Mar_Mër_Enj_Pre_Sht".split("_"),
-			meridiem: function (hours, minutes, isLower) {
-				return hours < 12 ? 'PD' : 'MD';
+			meridiem: function (hour, minute, isLower) {
+				return hour < 12 ? 'PD' : 'MD';
 			},
 			date_suffix: function (date) {
 				return ".";
@@ -1006,7 +1006,7 @@
 			date_suffix: function (date) {
 				return ".";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1018,7 +1018,7 @@
 			date_suffix: function (date) {
 				return ".";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1035,7 +1035,7 @@
 					(b === 3) ? 'e' : 'e';
 				return output;
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1087,7 +1087,7 @@
 			date_suffix: function (number) {
 				return "";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1106,7 +1106,7 @@
 
 				return (suffixes[a] || suffixes[b] || suffixes[c]);
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1118,7 +1118,7 @@
 			date_suffix: function (date) {
 				return "";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1130,7 +1130,7 @@
 			date_suffix: function (date) {
 				return "";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1162,7 +1162,7 @@
 			date_suffix: function (date) {
 				return "";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
@@ -1174,7 +1174,7 @@
 			date_suffix: function (date) {
 				return "";
 			},
-			meridiem: function (hours, minutes, isLower) {
+			meridiem: function (hour, minute, isLower) {
 				return "";
 			}
 		},
