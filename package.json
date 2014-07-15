@@ -22,6 +22,7 @@
     "url": "https://github.com/UziTech/js-date-format/issues"
   },
   "homepage": "https://github.com/UziTech/js-date-format",
+  "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-qunit": "^0.4.0",
