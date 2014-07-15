@@ -189,17 +189,17 @@ function testMethod(date, method, value, expected, test){
     testFormat(null, "Hours", "TT", 0, 23, function(i){
       return (i < 12? "AM" : "PM");
     });
-		testMethod(null, "Locale", "eo", "A.T.M.", function(d){
-			d.setHours(1);
-			return d.getMeridiem(false);
-		});
-		testMethod(null, "Locale", "eo", "a.t.m.", function(d){
-			d.setHours(1);
-			return d.getMeridiem(true);
-		});
-		testMethod(null, "Locale", "eo", "a", function(d){
-			return d.getDateSuffix();
-		});
-  </script>
+    testMethod(null, "Locale", "eo", "A.T.M.", function(d){
+      d.setHours(1);
+      return d.getMeridiem(false);
+    });
+    testMethod(null, "Locale", "eo", "a.t.m.", function(d){
+      d.setHours(1);
+      return d.getMeridiem(true);
+    });
+    testMethod(null, "Locale", "eo", "a", function(d){
+      return d.getDateSuffix();
+    });
+</script>
 </body>
 </html>
