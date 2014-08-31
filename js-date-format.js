@@ -93,6 +93,11 @@
 		}
 		return Date.locales[locale].meridiem(this.getHours(), this.getMinutes(), isLower);
 	};
+	
+	Date.prototype.getLastDate = function () {
+		return (new Date(this.getYear(), this.getMonth() + 1, 0)).getDate();
+	};
+	
 	/* languages from http://momentjs.com */
 	Date.locales = {
 		"en": {
