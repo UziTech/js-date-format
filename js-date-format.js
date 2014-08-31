@@ -22,7 +22,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 (function () {
-	"use strict"
+	"use strict";
 
 	Date.prototype.setLocale = function (lang) {
 		if (lang && lang in Date.locales) {
@@ -39,7 +39,7 @@
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
-			locale = this.locale
+			locale = this.locale;
 		}
 		return Date.locales[locale].month_names[this.getMonth()];
 	};
@@ -49,7 +49,7 @@
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
-			locale = this.locale
+			locale = this.locale;
 		}
 		return Date.locales[locale].month_names_short[this.getMonth()];
 	};
@@ -59,7 +59,7 @@
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
-			locale = this.locale
+			locale = this.locale;
 		}
 		return Date.locales[locale].day_names[this.getDay()];
 	};
@@ -69,7 +69,7 @@
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
-			locale = this.locale
+			locale = this.locale;
 		}
 		return Date.locales[locale].day_names_short[this.getDay()];
 	};
@@ -79,20 +79,20 @@
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
-			locale = this.locale
+			locale = this.locale;
 		}
 		return Date.locales[locale].date_suffix(this.getDate());
-	}
+	};
 
 	Date.prototype.getMeridiem = function (isLower, lang) {
 		var locale = "en";
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
-			locale = this.locale
+			locale = this.locale;
 		}
 		return Date.locales[locale].meridiem(this.getHours(), this.getMinutes(), isLower);
-	}
+	};
 	/* languages from http://momentjs.com */
 	Date.locales = {
 		"en": {
@@ -576,7 +576,7 @@
 			},
 			date_suffix: function () {
 				return '.';
-			},
+			}
 		},
 		"hy-am": {
 			month_names: 'հունվար_փետրվար_մարտ_ապրիլ_մայիս_հունիս_հուլիս_օգոստոս_սեպտեմբեր_հոկտեմբեր_նոյեմբեր_դեկտեմբեր'.split('_'),
@@ -960,7 +960,7 @@
 			},
 			date_suffix: function (date) {
 				return '-го';
-			},
+			}
 		},
 		"sk": {
 			month_names: "január_február_marec_apríl_máj_jún_júl_august_september_október_november_december".split("_"),
@@ -1344,9 +1344,9 @@
 
 		var formats = new Array();
 		while (formatString.length > 0) {
-			if (formatString[0] == "\"") {
+			if (formatString[0] === "\"") {
 				var temp = /"[^"]*"/m.exec(formatString);
-				if (temp == null) {
+				if (temp === null) {
 					formats.push(formatString.substring(1));
 					formatString = "";
 				} else {
@@ -1354,9 +1354,9 @@
 					formats.push(temp);
 					formatString = formatString.substring(temp.length + 2);
 				}
-			} else if (formatString[0] == "'") {
+			} else if (formatString[0] === "'") {
 				var temp = /'[^']*'/m.exec(formatString);
-				if (temp == null) {
+				if (temp === null) {
 					formats.push(formatString.substring(1));
 					formatString = "";
 				} else {
@@ -1364,7 +1364,7 @@
 					formats.push(temp);
 					formatString = formatString.substring(temp.length + 2);
 				}
-			} else if (formatString[0] == "\\") {
+			} else if (formatString[0] === "\\") {
 				if (formatString.length > 1) {
 					formats.push(formatString.substring(1, 2));
 					formatString = formatString.substring(2);
