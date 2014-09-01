@@ -95,7 +95,7 @@
 	};
 	
 	Date.prototype.getLastDate = function () {
-		return (new Date(this.getYear(), this.getMonth() + 1, 0)).getDate();
+		return (new Date(this.getFullYear(), this.getMonth() + 1, 0)).getDate();
 	};
 	
 	/* languages from http://momentjs.com */
