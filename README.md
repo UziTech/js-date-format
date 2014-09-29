@@ -65,10 +65,10 @@ Format Options
 - fff: Thousandths of a second
 - tt: am/pm
 - TT: AM/PM
-- zzzz: timezone
-- zzz: timezone
-- zz: timezone
-- z: timezone
+- zzzz: timezone (e.g. -05:00)
+- zzz: timezone (e.g. -5:00)
+- zz: timezone (e.g. -05)
+- z: timezone (e.g. -5)
 - ": Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
 - ': Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote.
 - \\: Copies next character to output
