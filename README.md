@@ -25,6 +25,10 @@ Gets the abbreviated day of the week name in the specified language. If no langu
 
 Gets the date suffix for the day of the month in the specified language. If no language is specified it will default to "en". (eg. th)
 
+#### getLastDate()
+
+Gets the last day of the month. (eg. 31)
+
 #### getLocale()
 
 Gets the locale for the month and day names. The default is "en".
@@ -77,4 +81,4 @@ Format Options
 Demo
 ====
 
-go to http://uzitech.com/files/dateformat.php for a demo or download the zip and open js-date-format.html
+go to http://uzitech.github.io/js-date-format/ for a demo or download the zip and open js-date-format.html
