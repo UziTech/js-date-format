@@ -1,3 +1,11 @@
+install
+=======
+
+```html
+<script src="/path/to/js-date-format.js"></script>
+<script src="/path/to/locales/all.js"></script>
+```
+
 js-date-format
 ==============
 
