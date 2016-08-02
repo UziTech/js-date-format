@@ -1,79 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<title>js-date-format demo</title>
-<script type="text/javascript" src="js-date-format.js"></script>
-</head>
-<body>
-  <h1>Demo</h1>
-    Date = <script type="text/javascript">document.write((new Date).toString());</script>
-  <h2>Options</h2>
-  <ul>
-    <li>YYYY: 4 digit year = <script type="text/javascript">document.write((new Date).format("YYYY"));</script></li>
-    <li>YY: 2 digit year = <script type="text/javascript">document.write((new Date).format("YY"));</script></li>
-    <li>MMMM: Month name = <script type="text/javascript">document.write((new Date).format("MMMM"));</script></li>
-    <li>MMM: Month name abbreviation = <script type="text/javascript">document.write((new Date).format("MMM"));</script></li>
-    <li>MM: Month 01-12 = <script type="text/javascript">document.write((new Date).format("MM"));</script></li>
-    <li>M: Month 1-12 = <script type="text/javascript">document.write((new Date).format("M"));</script></li>
-    <li>DDDD: Day of the week name = <script type="text/javascript">document.write((new Date).format("DDDD"));</script></li>
-    <li>DDD: Day of the week name abbreviation = <script type="text/javascript">document.write((new Date).format("DDD"));</script></li>
-    <li>DD: Day of the month 01-31 = <script type="text/javascript">document.write((new Date).format("DD"));</script></li>
-    <li>D: Day of the month 1-31 = <script type="text/javascript">document.write((new Date).format("D"));</script></li>
-    <li>S: Day of the month suffix (st|nd|rd|th) = <script type="text/javascript">document.write((new Date).format("S"));</script></li>
-    <li>HH: Hours 00-23 = <script type="text/javascript">document.write((new Date).format("HH"));</script></li>
-    <li>H: Hours 0-23 = <script type="text/javascript">document.write((new Date).format("H"));</script></li>
-    <li>hh: Hours 01-12 = <script type="text/javascript">document.write((new Date).format("hh"));</script></li>
-    <li>h: Hours 1-12 = <script type="text/javascript">document.write((new Date).format("h"));</script></li>
-    <li>mm: Minutes 00-59 = <script type="text/javascript">document.write((new Date).format("mm"));</script></li>
-    <li>m: Minutes 0-59 = <script type="text/javascript">document.write((new Date).format("m"));</script></li>
-    <li>ss: Seconds 00-59 = <script type="text/javascript">document.write((new Date).format("ss"));</script></li>
-    <li>s: Seconds 0-59 = <script type="text/javascript">document.write((new Date).format("s"));</script></li>
-    <li>f: Tenths of a second = <script type="text/javascript">document.write((new Date).format("f"));</script></li>
-    <li>ff: Hundredths of a second = <script type="text/javascript">document.write((new Date).format("ff"));</script></li>
-    <li>fff: Thousandths of a second = <script type="text/javascript">document.write((new Date).format("fff"));</script></li>
-    <li>tt: am/pm = <script type="text/javascript">document.write((new Date).format("tt"));</script></li>
-    <li>TT: AM/PM = <script type="text/javascript">document.write((new Date).format("TT"));</script></li>
-    <li>zzzz: timezone = <script type="text/javascript">document.write((new Date).format("zzzz"));</script>
-    <li>zzz: timezone = <script type="text/javascript">document.write((new Date).format("zzz"));</script>
-    <li>zz: timezone = <script type="text/javascript">document.write((new Date).format("zz"));</script>
-    <li>z: timezone = <script type="text/javascript">document.write((new Date).format("z"));</script>
-    <li>": Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote. YYYY"YYYY = <script type="text/javascript">document.write((new Date).format("YYYY\"YYYY"));</script></li>
-    <li>': Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote. MMM'MMM = <script type="text/javascript">document.write((new Date).format("MMM'MMM"));</script></li>
-    <li>\: Copies next character to output D\D = <script type="text/javascript">document.write((new Date).format("D\\D"));</script></li>
-    <li>Any other character will be copied to output /.* = <script type="text/javascript">document.write((new Date).format("/.*"));</script></li>
-  </ul>
-  <h3>Try it</h3>
-  var d = new Date("<input id="date" value="5/12/2014 11:15 AM" style="border: 0 none;font-size:12pt; font-family:serif;background-color: #ddd" />");<br />
-  d.format("<input id="pattern" value="DDDD, DS 'of' MMMM YYYY, h:mm:ss.fff TT" style="border: 0 none;font-size:12pt; font-family:serif;background-color:#ddd" />");<br/>
-  <hr />
-  <div>Output:</div>
-  <textarea id="format" placeholder="Format" readonly></textarea><br/>
-  <button type="button" onclick="formatPattern();">Submit</button>
-  <script type="text/javascript">
-    var pattern = document.getElementById("pattern");
-    var date = document.getElementById("date");
-    date.onkeyup = pattern.onkeyup = function(){
-      var span = document.createElement("span");
-      span.innerHTML = this.value;
-      document.body.appendChild(span);
-      this.style.width = (span.offsetWidth + 2) + "px";
-      document.body.removeChild(span);
-    };
-    pattern.onkeyup();
-    date.onkeyup();
-    function formatPattern(){
-      var pattern = document.getElementById("pattern");
-      var format = document.getElementById("format");
-      var date = document.getElementById("date");
-      var d = new Date(date.value);
-      if(isNaN(d.getTime()))
-      {
-        format.value = "Invalid Date";
-      } else {
-        format.value = d.format(pattern.value);
-      }
-    };
-    formatPattern();
-  </script>
-</body>
+  <head>
+    <meta charset='utf-8'>
+    <title>js-date-format</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <section id="main_content">
+				<h3>Introduction</h3>
+				<p>Add formatting functions to a Date object</p>
+				<h3>Usage</h3>
+				<p>Adds the following methods to a date object:</p>
+				<h4>getMonthName([language])</h4>
+				Gets the month name. (eg. January)
+				<h4>getMonthNameShort([language])</h4>
+				Gets the abbreviated month name. (eg. Jan)
+				<h4>getDayName([language])</h4>
+				Gets the day of the week name. (eg. Sunday)
+				<h4>getDayNameShort([language])</h4>
+				Gets the abbreviated day of the week name. (eg. Sun)
+				<h4>getDateSuffix([language])</h4>
+				Gets the date suffix for the day of the month. (eg. th)
+				<h4>getLastDate()</h4>
+				Gets the last day of the month. (eg. 31)
+				<h4>getLocale()</h4>
+				Gets the locale for the month and day names. The default is "en".
+				<h4>setLocale(locale)</h4>
+				Sets the locale for the month and day names.
+				<h4>format(format_string)</h4>
+				Gets a string representation of the date object based on the format_string. (eg. "DDDD, MMMM DS h:mm TT" = Wednesday, January 1st 12:00 AM)
+				<h3>Demo</h3>
+				<script type="text/javascript" src="js-date-format.js"></script>
+				<script type="text/javascript" src="locales/all.js"></script>
+				<h4>Options</h4>
+				<ul>
+					<li>YYYY: 4 digit year = <script type="text/javascript">document.write((new Date).format("YYYY"));</script></li>
+					<li>YY: 2 digit year = <script type="text/javascript">document.write((new Date).format("YY"));</script></li>
+					<li>MMMM: Month name = <script type="text/javascript">document.write((new Date).format("MMMM"));</script></li>
+					<li>MMM: Month name abbreviation = <script type="text/javascript">document.write((new Date).format("MMM"));</script></li>
+					<li>MM: Month 01-12 = <script type="text/javascript">document.write((new Date).format("MM"));</script></li>
+					<li>M: Month 1-12 = <script type="text/javascript">document.write((new Date).format("M"));</script></li>
+					<li>DDDD: Day of the week name = <script type="text/javascript">document.write((new Date).format("DDDD"));</script></li>
+					<li>DDD: Day of the week name abbreviation = <script type="text/javascript">document.write((new Date).format("DDD"));</script></li>
+					<li>DD: Day of the month 01-31 = <script type="text/javascript">document.write((new Date).format("DD"));</script></li>
+					<li>D: Day of the month 1-31 = <script type="text/javascript">document.write((new Date).format("D"));</script></li>
+					<li>S: Day of the month suffix (st|nd|rd|th) = <script type="text/javascript">document.write((new Date).format("S"));</script></li>
+					<li>HH: Hours 00-23 = <script type="text/javascript">document.write((new Date).format("HH"));</script></li>
+					<li>H: Hours 0-23 = <script type="text/javascript">document.write((new Date).format("H"));</script></li>
+					<li>hh: Hours 01-12 = <script type="text/javascript">document.write((new Date).format("hh"));</script></li>
+					<li>h: Hours 1-12 = <script type="text/javascript">document.write((new Date).format("h"));</script></li>
+					<li>mm: Minutes 00-59 = <script type="text/javascript">document.write((new Date).format("mm"));</script></li>
+					<li>m: Minutes 0-59 = <script type="text/javascript">document.write((new Date).format("m"));</script></li>
+					<li>ss: Seconds 00-59 = <script type="text/javascript">document.write((new Date).format("ss"));</script></li>
+					<li>s: Seconds 0-59 = <script type="text/javascript">document.write((new Date).format("s"));</script></li>
+					<li>f: Tenths of a second = <script type="text/javascript">document.write((new Date).format("f"));</script></li>
+					<li>ff: Hundredths of a second = <script type="text/javascript">document.write((new Date).format("ff"));</script></li>
+					<li>fff: Thousandths of a second = <script type="text/javascript">document.write((new Date).format("fff"));</script></li>
+					<li>tt: am/pm = <script type="text/javascript">document.write((new Date).format("tt"));</script></li>
+					<li>TT: AM/PM = <script type="text/javascript">document.write((new Date).format("TT"));</script></li>
+					<li>zzzz: timezone = <script type="text/javascript">document.write((new Date).format("zzzz"));</script></li>
+					<li>zzz: timezone = <script type="text/javascript">document.write((new Date).format("zzz"));</script></li>
+					<li>zz: timezone = <script type="text/javascript">document.write((new Date).format("zz"));</script></li>
+					<li>z: timezone = <script type="text/javascript">document.write((new Date).format("z"));</script></li>
+					<li>": Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote. YYYY"YYYY = <script type="text/javascript">document.write((new Date).format("YYYY\"YYYY"));</script></li>
+					<li>': Start of a literal string. Copies characters between quotes to output or copies rest of string if no closing quote. MMM'MMM = <script type="text/javascript">document.write((new Date).format("MMM'MMM"));</script></li>
+					<li>\: Copies next character to output D\D = <script type="text/javascript">document.write((new Date).format("D\\D"));</script></li>
+					<li>Any other character will be copied to output /.* = <script type="text/javascript">document.write((new Date).format("/.*"));</script></li>
+				</ul>
+				<h3>Try it</h3>
+				<p>
+					<label for="locales">Locale</label><br />
+					<select id="locales"></select><br />
+					<label for="pattern">Pattern:</label><br/>
+					<textarea id="pattern" placeholder="Pattern">DDDD, MMMM DS h:mm:ss.fff TT</textarea><br/>
+					<label for="format">Output:</label><br/>
+					<textarea id="format" placeholder="Format" readonly=""></textarea><br/>
+					<script type="text/javascript">
+						var locales = document.getElementById("locales");
+						var pattern = document.getElementById("pattern");
+						var format = document.getElementById("format");
+						function formatPattern() {
+							var d = new Date();
+							format.value = d.format(pattern.value);
+						}
+						function changeLocale() {
+							var locale = locales.value;
+							Date.setLocale(locale);
+							formatPattern();
+						}
+						function setLocales() {
+							for (var locale in Date.locales) {
+								var option = document.createElement("option");
+								option.innerHTML = locale;
+								locales.appendChild(option);
+							}
+						}
+						pattern.addEventListener("change", formatPattern);
+						pattern.addEventListener("input", formatPattern);
+						locales.addEventListener("change", changeLocale);
+						setLocales();
+						formatPattern();
+					</script>
+				</p>
+
+			</section>
+
+		</div>
+	</body>
 </html>
