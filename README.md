@@ -1,8 +1,11 @@
 install
 =======
 
+js-date-format.js comes with English("en") as the default locale you can add any languages you want from the `/locales` directory or `/locales/all.js` to include all of them.
+
 ```html
 <script src="/path/to/js-date-format.js"></script>
+<!-- add any locales you want included after the js-date-format.js script-->
 <script src="/path/to/locales/all.js"></script>
 ```
 
