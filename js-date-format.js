@@ -1,6 +1,6 @@
 /**
  * js-date-format (js-date-format.js)
- * v1.0
+ * v2.0
  * (c) Tony Brix (tonybrix.info) - 2014.
  * https://github.com/UziTech/js-date-format
  *
@@ -23,8 +23,8 @@
  */
 (function () {
 	"use strict";
-	
-	
+
+
 	Date.locales = {
 		en: {
 			month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -125,7 +125,7 @@
 		}
 		return Date.locales[locale].meridiem(this.getHours(), this.getMinutes(), isLower);
 	};
-	
+
 	Date.prototype.getLastDate = function () {
 		return (new Date(this.getFullYear(), this.getMonth() + 1, 0)).getDate();
 	};
