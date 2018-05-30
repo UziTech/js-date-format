@@ -4,7 +4,7 @@ Date.locales["hi"] = {
 	month_names_short: 'जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.'.split("_"),
 	day_names: 'रविवार_सोमवार_मंगलवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split("_"),
 	day_names_short: 'रवि_सोम_मंगल_बुध_गुरू_शुक्र_शनि'.split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "रात";
 		} else if (hour < 10) {

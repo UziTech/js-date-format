@@ -4,7 +4,7 @@ Date.locales["zh-tw"] = {
 	month_names_short: "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
 	day_names: "星期日_星期一_星期二_星期三_星期四_星期五_星期六".split("_"),
 	day_names_short: "週日_週一_週二_週三_週四_週五_週六".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		var hm = hour * 100 + minute;
 		if (hm < 900) {
 			return "早上";

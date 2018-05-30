@@ -12,7 +12,7 @@ Date.locales["sv"] = {
 			(b === 3) ? 'e' : 'e';
 		return output;
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

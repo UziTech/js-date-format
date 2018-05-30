@@ -7,7 +7,7 @@ Date.locales["tl-ph"] = {
 	date_suffix: function (number) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

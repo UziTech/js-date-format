@@ -32,12 +32,12 @@
 					return "th";
 				}
 			},
-			meridiem: function (hour, minute, isLower) {
-				if (hour < 12) {
-					return isLower ? "am" : "AM";
-				} else {
-					return isLower ? "pm" : "PM";
-				}
+			meridiem: function (hour, minute, isLower, isShort) {
+				var m = (hour < 12 ? "AM" : "PM");
+				m = (isLower ? m.toLowerCase() : m);
+				m = (isShort ? m[0] : m);
+
+				return m;
 			}
 		}
 	};
@@ -108,14 +108,14 @@
 		return Date.locales[locale].date_suffix(this.getDate());
 	};
 
-	Date.prototype.getMeridiem = function (isLower, lang) {
+	Date.prototype.getMeridiem = function (isLower, isShort, lang) {
 		var locale = "en";
 		if (lang && lang in Date.locales) {
 			locale = lang;
 		} else if (this.locale && this.locale in Date.locales) {
 			locale = this.locale;
 		}
-		return Date.locales[locale].meridiem(this.getHours(), this.getMinutes(), isLower);
+		return Date.locales[locale].meridiem(this.getHours(), this.getMinutes(), isLower, isShort);
 	};
 
 	Date.prototype.getLastDate = function () {
@@ -226,10 +226,16 @@
 				return Math.floor(-this.date.getTimezoneOffset() / 60);
 			},
 			tt: function () {
-				return this.date.getMeridiem(true);
+				return this.date.getMeridiem(true, false);
+			},
+			t: function () {
+				return this.date.getMeridiem(true, true);
 			},
 			TT: function () {
-				return this.date.getMeridiem(false);
+				return this.date.getMeridiem(false, false);
+			},
+			T: function () {
+				return this.date.getMeridiem(false, true);
 			}
 		};
 

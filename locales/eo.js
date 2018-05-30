@@ -7,7 +7,7 @@ Date.locales["eo"] = {
 	date_suffix: function (date) {
 		return "a";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 12) {
 			return isLower ? 'a.t.m.' : 'A.T.M.';
 		} else {

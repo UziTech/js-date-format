@@ -7,7 +7,7 @@ Date.locales["ko"] = {
 	date_suffix: function (date) {
 		return "일";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return hour < 12 ? '오전' : '오후';
 	}
 };

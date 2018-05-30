@@ -7,7 +7,7 @@ Date.locales["hy-am"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "գիշերվա";
 		} else if (hour < 12) {

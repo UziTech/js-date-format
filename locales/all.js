@@ -7,10 +7,11 @@ Date.locales["ar-ma"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ar"] = {
 	month_names: "يناير/ كانون الثاني_فبراير/ شباط_مارس/ آذار_أبريل/ نيسان_مايو/ أيار_يونيو/ حزيران_يوليو/ تموز_أغسطس/ آب_سبتمبر/ أيلول_أكتوبر/ تشرين الأول_نوفمبر/ تشرين الثاني_ديسمبر/ كانون الأول".split("_"),
 	month_names_short: "يناير/ كانون الثاني_فبراير/ شباط_مارس/ آذار_أبريل/ نيسان_مايو/ أيار_يونيو/ حزيران_يوليو/ تموز_أغسطس/ آب_سبتمبر/ أيلول_أكتوبر/ تشرين الأول_نوفمبر/ تشرين الثاني_ديسمبر/ كانون الأول".split("_"),
@@ -19,10 +20,11 @@ Date.locales["ar"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["bg"] = {
 	month_names: "януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември".split("_"),
 	month_names_short: "янр_фев_мар_апр_май_юни_юли_авг_сеп_окт_ное_дек".split("_"),
@@ -47,10 +49,11 @@ Date.locales["bg"] = {
 			return '-ти';
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["br"] = {
 	month_names: "Genver_C'hwevrer_Meurzh_Ebrel_Mae_Mezheven_Gouere_Eost_Gwengolo_Here_Du_Kerzu".split("_"),
 	month_names_short: "Gen_C'hwe_Meu_Ebr_Mae_Eve_Gou_Eos_Gwe_Her_Du_Ker".split("_"),
@@ -59,10 +62,11 @@ Date.locales["br"] = {
 	date_suffix: function (date) {
 		return (date === 1) ? 'añ' : 'vet';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["bs"] = {
 	month_names: "januar_februar_mart_april_maj_juni_juli_avgust_septembar_oktobar_novembar_decembar".split("_"),
 	month_names_short: "jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.".split("_"),
@@ -71,10 +75,11 @@ Date.locales["bs"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ca"] = {
 	month_names: "gener_febrer_març_abril_maig_juny_juliol_agost_setembre_octubre_novembre_desembre".split("_"),
 	month_names_short: "gen._febr._mar._abr._mai._jun._jul._ag._set._oct._nov._des.".split("_"),
@@ -83,10 +88,11 @@ Date.locales["ca"] = {
 	date_suffix: function (date) {
 		return "º";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["cs"] = {
 	month_names: "leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec".split("_"),
 	month_names_short: "led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro".split("_"),
@@ -95,10 +101,11 @@ Date.locales["cs"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["cv"] = {
 	month_names: "кăрлач_нарăс_пуш_ака_май_çĕртме_утă_çурла_авăн_юпа_чӳк_раштав".split("_"),
 	month_names_short: "кăр_нар_пуш_ака_май_çĕр_утă_çур_ав_юпа_чӳк_раш".split("_"),
@@ -107,10 +114,11 @@ Date.locales["cv"] = {
 	date_suffix: function (date) {
 		return "-мĕш";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["cy"] = {
 	month_names: "Ionawr_Chwefror_Mawrth_Ebrill_Mai_Mehefin_Gorffennaf_Awst_Medi_Hydref_Tachwedd_Rhagfyr".split("_"),
 	month_names_short: "Ion_Chwe_Maw_Ebr_Mai_Meh_Gor_Aws_Med_Hyd_Tach_Rhag".split("_"),
@@ -136,10 +144,11 @@ Date.locales["cy"] = {
 
 		return output;
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["da"] = {
 	month_names: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
 	month_names_short: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
@@ -148,10 +157,11 @@ Date.locales["da"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["de"] = {
 	month_names: "Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
 	month_names_short: "Jan._Febr._Mrz._Apr._Mai_Jun._Jul._Aug._Sept._Okt._Nov._Dez.".split("_"),
@@ -160,10 +170,11 @@ Date.locales["de"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["el"] = {
 	month_names: "Ιανουαρίου_Φεβρουαρίου_Μαρτίου_Απριλίου_Μαΐου_Ιουνίου_Ιουλίου_Αυγούστου_Σεπτεμβρίου_Οκτωβρίου_Νοεμβρίου_Δεκεμβρίου".split("_"),
 	month_names_short: "Ιαν_Φεβ_Μαρ_Απρ_Μαϊ_Ιουν_Ιουλ_Αυγ_Σεπ_Οκτ_Νοε_Δεκ".split("_"),
@@ -172,7 +183,7 @@ Date.locales["el"] = {
 	date_suffix: function (date) {
 		return "η";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour > 11) {
 			return isLower ? 'μμ' : 'ΜΜ';
 		} else {
@@ -180,6 +191,7 @@ Date.locales["el"] = {
 		}
 	}
 };
+
 Date.locales["en-au"] = {
 	month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 	month_names_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -200,14 +212,15 @@ Date.locales["en-au"] = {
 			return "th";
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
-		if (hour < 12) {
-			return isLower ? "am" : "AM";
-		} else {
-			return isLower ? "pm" : "PM";
-		}
+	meridiem: function (hour, minute, isLower, isShort) {
+		var m = (hour < 12 ? "AM" : "PM");
+		m = (isLower ? m.toLowerCase() : m);
+		m = (isShort ? m[0] : m);
+
+		return m;
 	}
 };
+
 Date.locales["en-ca"] = {
 	month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 	month_names_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -228,14 +241,15 @@ Date.locales["en-ca"] = {
 			return "th";
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
-		if (hour < 12) {
-			return isLower ? "am" : "AM";
-		} else {
-			return isLower ? "pm" : "PM";
-		}
+	meridiem: function (hour, minute, isLower, isShort) {
+		var m = (hour < 12 ? "AM" : "PM");
+		m = (isLower ? m.toLowerCase() : m);
+		m = (isShort ? m[0] : m);
+
+		return m;
 	}
 };
+
 Date.locales["en-gb"] = {
 	month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 	month_names_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -256,14 +270,44 @@ Date.locales["en-gb"] = {
 			return "th";
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
-		if (hour < 12) {
-			return isLower ? "am" : "AM";
-		} else {
-			return isLower ? "pm" : "PM";
-		}
+	meridiem: function (hour, minute, isLower, isShort) {
+		var m = (hour < 12 ? "AM" : "PM");
+		m = (isLower ? m.toLowerCase() : m);
+		m = (isShort ? m[0] : m);
+
+		return m;
 	}
 };
+
+Date.locales["en"] = {
+	month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+	month_names_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+	day_names: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+	day_names_short: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+	date_suffix: function (date) {
+		var day10 = ~~(date % 100 / 10);
+		var day1 = date % 10;
+		if (day10 === 1) {
+			return "th";
+		} else if (day1 === 1) {
+			return "st";
+		} else if (day1 === 2) {
+			return "nd";
+		} else if (day1 === 3) {
+			return "rd";
+		} else {
+			return "th";
+		}
+	},
+	meridiem: function (hour, minute, isLower, isShort) {
+		var m = (hour < 12 ? "AM" : "PM");
+		m = (isLower ? m.toLowerCase() : m);
+		m = (isShort ? m[0] : m);
+
+		return m;
+	}
+};
+
 Date.locales["eo"] = {
 	month_names: "januaro_februaro_marto_aprilo_majo_junio_julio_aŭgusto_septembro_oktobro_novembro_decembro".split("_"),
 	month_names_short: "jan_feb_mar_apr_maj_jun_jul_aŭg_sep_okt_nov_dec".split("_"),
@@ -272,7 +316,7 @@ Date.locales["eo"] = {
 	date_suffix: function (date) {
 		return "a";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 12) {
 			return isLower ? 'a.t.m.' : 'A.T.M.';
 		} else {
@@ -280,6 +324,7 @@ Date.locales["eo"] = {
 		}
 	}
 };
+
 Date.locales["es"] = {
 	month_names: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
 	month_names_short: "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_"),
@@ -288,10 +333,11 @@ Date.locales["es"] = {
 	date_suffix: function (date) {
 		return "º";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["et"] = {
 	month_names: "jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember".split("_"),
 	month_names_short: "jaan_veebr_märts_apr_mai_juuni_juuli_aug_sept_okt_nov_dets".split("_"),
@@ -300,10 +346,11 @@ Date.locales["et"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["eu"] = {
 	month_names: "urtarrila_otsaila_martxoa_apirila_maiatza_ekaina_uztaila_abuztua_iraila_urria_azaroa_abendua".split("_"),
 	month_names_short: "urt._ots._mar._api._mai._eka._uzt._abu._ira._urr._aza._abe.".split("_"),
@@ -312,16 +359,17 @@ Date.locales["eu"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["fa"] = {
 	month_names: 'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split('_'),
 	month_names_short: 'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split('_'),
 	day_names: 'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split('_'),
 	day_names_short: 'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split('_'),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 12) {
 			return "قبل از ظهر";
 		} else {
@@ -332,6 +380,7 @@ Date.locales["fa"] = {
 		return 'م';
 	}
 };
+
 Date.locales["fi"] = {
 	month_names: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split("_"),
 	month_names_short: "tammi_helmi_maalis_huhti_touko_kesä_heinä_elo_syys_loka_marras_joulu".split("_"),
@@ -340,10 +389,11 @@ Date.locales["fi"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["fo"] = {
 	month_names: "januar_februar_mars_apríl_mai_juni_juli_august_september_oktober_november_desember".split("_"),
 	month_names_short: "jan_feb_mar_apr_mai_jun_jul_aug_sep_okt_nov_des".split("_"),
@@ -352,10 +402,11 @@ Date.locales["fo"] = {
 	date_suffix: function () {
 		return '.';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["fr-ca"] = {
 	month_names: "janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre".split("_"),
 	month_names_short: "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
@@ -364,10 +415,11 @@ Date.locales["fr-ca"] = {
 	date_suffix: function (date) {
 		return (date === 1 ? 'er' : '');
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["fr"] = {
 	month_names: "janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre".split("_"),
 	month_names_short: "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
@@ -376,10 +428,11 @@ Date.locales["fr"] = {
 	date_suffix: function (date) {
 		return (date === 1 ? 'er' : '');
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["gl"] = {
 	month_names: "Xaneiro_Febreiro_Marzo_Abril_Maio_Xuño_Xullo_Agosto_Setembro_Outubro_Novembro_Decembro".split("_"),
 	month_names_short: "Xan._Feb._Mar._Abr._Mai._Xuñ._Xul._Ago._Set._Out._Nov._Dec.".split("_"),
@@ -388,10 +441,11 @@ Date.locales["gl"] = {
 	date_suffix: function (date) {
 		return 'º';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["he"] = {
 	month_names: "ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר".split("_"),
 	month_names_short: "ינו׳_פבר׳_מרץ_אפר׳_מאי_יוני_יולי_אוג׳_ספט׳_אוק׳_נוב׳_דצמ׳".split("_"),
@@ -400,16 +454,17 @@ Date.locales["he"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["hi"] = {
 	month_names: 'जनवरी_फ़रवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितम्बर_अक्टूबर_नवम्बर_दिसम्बर'.split("_"),
 	month_names_short: 'जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.'.split("_"),
 	day_names: 'रविवार_सोमवार_मंगलवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split("_"),
 	day_names_short: 'रवि_सोम_मंगल_बुध_गुरू_शुक्र_शनि'.split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "रात";
 		} else if (hour < 10) {
@@ -426,24 +481,26 @@ Date.locales["hi"] = {
 		return "";
 	}
 };
+
 Date.locales["hr"] = {
-	month_names: "sječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_"),
-	month_names_short: "sje._vel._ožu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
+	month_names: "siječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_"),
+	month_names_short: "sij._velj._ožu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
 	day_names: "nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota".split("_"),
 	day_names_short: "ned._pon._uto._sri._čet._pet._sub.".split("_"),
 	date_suffix: function () {
 		return '.';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["hu"] = {
 	month_names: "január_február_március_április_május_június_július_augusztus_szeptember_október_november_december".split("_"),
 	month_names_short: "jan_feb_márc_ápr_máj_jún_júl_aug_szept_okt_nov_dec".split("_"),
 	day_names: "vasárnap_hétfő_kedd_szerda_csütörtök_péntek_szombat".split("_"),
 	day_names_short: "vas_hét_kedd_sze_csüt_pén_szo".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 12) {
 			return isLower === true ? 'de' : 'DE';
 		} else {
@@ -454,6 +511,7 @@ Date.locales["hu"] = {
 		return '.';
 	}
 };
+
 Date.locales["hy-am"] = {
 	month_names: 'հունվար_փետրվար_մարտ_ապրիլ_մայիս_հունիս_հուլիս_օգոստոս_սեպտեմբեր_հոկտեմբեր_նոյեմբեր_դեկտեմբեր'.split('_'),
 	month_names_short: 'հնվ_փտր_մրտ_ապր_մյս_հնս_հլս_օգս_սպտ_հկտ_նմբ_դկտ'.split('_'),
@@ -462,7 +520,7 @@ Date.locales["hy-am"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "գիշերվա";
 		} else if (hour < 12) {
@@ -474,12 +532,13 @@ Date.locales["hy-am"] = {
 		}
 	}
 };
+
 Date.locales["id"] = {
 	month_names: "Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember".split("_"),
 	month_names_short: "Jan_Feb_Mar_Apr_Mei_Jun_Jul_Ags_Sep_Okt_Nov_Des".split("_"),
 	day_names: "Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu".split("_"),
 	day_names_short: "Min_Sen_Sel_Rab_Kam_Jum_Sab".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 11) {
 			return 'pagi';
 		} else if (hour < 15) {
@@ -494,6 +553,7 @@ Date.locales["id"] = {
 		return "";
 	}
 };
+
 Date.locales["is"] = {
 	month_names: "janúar_febrúar_mars_apríl_maí_júní_júlí_ágúst_september_október_nóvember_desember".split("_"),
 	month_names_short: "jan_feb_mar_apr_maí_jún_júl_ágú_sep_okt_nóv_des".split("_"),
@@ -502,10 +562,11 @@ Date.locales["is"] = {
 	date_suffix: function () {
 		return '.';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["it"] = {
 	month_names: "Gennaio_Febbraio_Marzo_Aprile_Maggio_Giugno_Luglio_Agosto_Settembre_Ottobre_Novembre_Dicembre".split("_"),
 	month_names_short: "Gen_Feb_Mar_Apr_Mag_Giu_Lug_Ago_Set_Ott_Nov_Dic".split("_"),
@@ -514,16 +575,17 @@ Date.locales["it"] = {
 	date_suffix: function () {
 		return 'º';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ja"] = {
 	month_names: "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
 	month_names_short: "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
 	day_names: "日曜日_月曜日_火曜日_水曜日_木曜日_金曜日_土曜日".split("_"),
 	day_names_short: "日_月_火_水_木_金_土".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 12) {
 			return "午前";
 		} else {
@@ -534,6 +596,7 @@ Date.locales["ja"] = {
 		return "";
 	}
 };
+
 Date.locales["ka"] = {
 	month_names: 'იანვარი_თებერვალი_მარტი_აპრილი_მაისი_ივნისი_ივლისი_აგვისტო_სექტემბერი_ოქტომბერი_ნოემბერი_დეკემბერი'.split('_'),
 	month_names_short: "იან_თებ_მარ_აპრ_მაი_ივნ_ივლ_აგვ_სექ_ოქტ_ნოე_დეკ".split("_"),
@@ -554,10 +617,11 @@ Date.locales["ka"] = {
 
 		return "-ე";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["km"] = {
 	month_names: "មករា_កុម្ភៈ_មិនា_មេសា_ឧសភា_មិថុនា_កក្កដា_សីហា_កញ្ញា_តុលា_វិច្ឆិកា_ធ្នូ".split("_"),
 	month_names_short: "មករា_កុម្ភៈ_មិនា_មេសា_ឧសភា_មិថុនា_កក្កដា_សីហា_កញ្ញា_តុលា_វិច្ឆិកា_ធ្នូ".split("_"),
@@ -566,10 +630,11 @@ Date.locales["km"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ko"] = {
 	month_names: "1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월".split("_"),
 	month_names_short: "1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월".split("_"),
@@ -578,10 +643,11 @@ Date.locales["ko"] = {
 	date_suffix: function (date) {
 		return "일";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return hour < 12 ? '오전' : '오후';
 	}
 };
+
 Date.locales["lb"] = {
 	month_names: "Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
 	month_names_short: "Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.".split("_"),
@@ -590,10 +656,11 @@ Date.locales["lb"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["lt"] = {
 	month_names: "sausio_vasario_kovo_balandžio_gegužės_biržėlio_liepos_rugpjūčio_rugsėjo_spalio_lapkričio_gruodžio".split("_"),
 	month_names_short: "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_"),
@@ -602,10 +669,11 @@ Date.locales["lt"] = {
 	date_suffix: function (date) {
 		return "-oji";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["lv"] = {
 	month_names: "janvāris_februāris_marts_aprīlis_maijs_jūnijs_jūlijs_augusts_septembris_oktobris_novembris_decembris".split("_"),
 	month_names_short: "jan_feb_mar_apr_mai_jūn_jūl_aug_sep_okt_nov_dec".split("_"),
@@ -614,10 +682,11 @@ Date.locales["lv"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["mk"] = {
 	month_names: "јануари_февруари_март_април_мај_јуни_јули_август_септември_октомври_ноември_декември".split("_"),
 	month_names_short: "јан_фев_мар_апр_мај_јун_јул_авг_сеп_окт_ное_дек".split("_"),
@@ -642,16 +711,17 @@ Date.locales["mk"] = {
 			return '-ти';
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ml"] = {
 	month_names: 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split("_"),
 	month_names_short: 'ജനു._ഫെബ്രു._മാർ._ഏപ്രി._മേയ്_ജൂൺ_ജൂലൈ._ഓഗ._സെപ്റ്റ._ഒക്ടോ._നവം._ഡിസം.'.split("_"),
 	day_names: 'ഞായറാഴ്ച_തിങ്കളാഴ്ച_ചൊവ്വാഴ്ച_ബുധനാഴ്ച_വ്യാഴാഴ്ച_വെള്ളിയാഴ്ച_ശനിയാഴ്ച'.split("_"),
 	day_names_short: 'ഞായർ_തിങ്കൾ_ചൊവ്വ_ബുധൻ_വ്യാഴം_വെള്ളി_ശനി'.split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "രാത്രി";
 		} else if (hour < 12) {
@@ -668,12 +738,13 @@ Date.locales["ml"] = {
 		return "";
 	}
 };
+
 Date.locales["mr"] = {
 	month_names: 'जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split("_"),
 	month_names_short: 'जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split("_"),
 	day_names: 'रविवार_सोमवार_मंगळवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split("_"),
 	day_names_short: 'रवि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि'.split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "रात्री";
 		} else if (hour < 10) {
@@ -690,12 +761,13 @@ Date.locales["mr"] = {
 		return "";
 	}
 };
+
 Date.locales["ms-my"] = {
 	month_names: "Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember".split("_"),
 	month_names_short: "Jan_Feb_Mac_Apr_Mei_Jun_Jul_Ogs_Sep_Okt_Nov_Dis".split("_"),
 	day_names: "Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu".split("_"),
 	day_names_short: "Ahd_Isn_Sel_Rab_Kha_Jum_Sab".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 11) {
 			return 'pagi';
 		} else if (hour < 15) {
@@ -710,6 +782,7 @@ Date.locales["ms-my"] = {
 		return "";
 	}
 };
+
 Date.locales["nb"] = {
 	month_names: "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split("_"),
 	month_names_short: "jan._feb._mars_april_mai_juni_juli_aug._sep._okt._nov._des.".split("_"),
@@ -718,16 +791,17 @@ Date.locales["nb"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ne"] = {
 	month_names: 'जनवरी_फेब्रुवरी_मार्च_अप्रिल_मई_जुन_जुलाई_अगष्ट_सेप्टेम्बर_अक्टोबर_नोभेम्बर_डिसेम्बर'.split("_"),
 	month_names_short: 'जन._फेब्रु._मार्च_अप्रि._मई_जुन_जुलाई._अग._सेप्ट._अक्टो._नोभे._डिसे.'.split("_"),
 	day_names: 'आइतबार_सोमबार_मङ्गलबार_बुधबार_बिहिबार_शुक्रबार_शनिबार'.split("_"),
 	day_names_short: 'आइत._सोम._मङ्गल._बुध._बिहि._शुक्र._शनि.'.split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 3) {
 			return "राती";
 		} else if (hour < 10) {
@@ -746,6 +820,7 @@ Date.locales["ne"] = {
 		return "";
 	}
 };
+
 Date.locales["nl"] = {
 	month_names: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
 	month_names_short: "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
@@ -754,10 +829,11 @@ Date.locales["nl"] = {
 	date_suffix: function (date) {
 		return ((date === 1 || date === 8 || date >= 20) ? 'ste' : 'de');
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["nn"] = {
 	month_names: "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split("_"),
 	month_names_short: "jan_feb_mar_apr_mai_jun_jul_aug_sep_okt_nov_des".split("_"),
@@ -766,10 +842,11 @@ Date.locales["nn"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["pl"] = {
 	month_names: "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split("_"),
 	month_names_short: "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru".split("_"),
@@ -778,10 +855,11 @@ Date.locales["pl"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["pt-br"] = {
 	month_names: "janeiro_fevereiro_março_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro".split("_"),
 	month_names_short: "jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez".split("_"),
@@ -790,10 +868,11 @@ Date.locales["pt-br"] = {
 	date_suffix: function (date) {
 		return "º";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["pt"] = {
 	month_names: "janeiro_fevereiro_março_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro".split("_"),
 	month_names_short: "jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez".split("_"),
@@ -802,10 +881,11 @@ Date.locales["pt"] = {
 	date_suffix: function (date) {
 		return "º";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ro"] = {
 	month_names: "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie".split("_"),
 	month_names_short: "ian._febr._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.".split("_"),
@@ -814,16 +894,17 @@ Date.locales["ro"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ru"] = {
 	month_names: 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split('_'),
 	month_names_short: 'янв_фев_мар_апр_май_июнь_июль_авг_сен_окт_ноя_дек'.split('_'),
 	day_names: 'воскресенье_понедельник_вторник_среда_четверг_пятница_суббота'.split('_'),
 	day_names_short: "вс_пн_вт_ср_чт_пт_сб".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "ночи";
 		} else if (hour < 12) {
@@ -838,6 +919,7 @@ Date.locales["ru"] = {
 		return '-го';
 	}
 };
+
 Date.locales["sk"] = {
 	month_names: "január_február_marec_apríl_máj_jún_júl_august_september_október_november_december".split("_"),
 	month_names_short: "jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec".split("_"),
@@ -846,10 +928,11 @@ Date.locales["sk"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["sl"] = {
 	month_names: "januar_februar_marec_april_maj_junij_julij_avgust_september_oktober_november_december".split("_"),
 	month_names_short: "jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.".split("_"),
@@ -858,22 +941,24 @@ Date.locales["sl"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["sq"] = {
 	month_names: "Janar_Shkurt_Mars_Prill_Maj_Qershor_Korrik_Gusht_Shtator_Tetor_Nëntor_Dhjetor".split("_"),
 	month_names_short: "Jan_Shk_Mar_Pri_Maj_Qer_Kor_Gus_Sht_Tet_Nën_Dhj".split("_"),
 	day_names: "E Diel_E Hënë_E Martë_E Mërkurë_E Enjte_E Premte_E Shtunë".split("_"),
 	day_names_short: "Die_Hën_Mar_Mër_Enj_Pre_Sht".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return hour < 12 ? 'PD' : 'MD';
 	},
 	date_suffix: function (date) {
 		return ".";
 	}
 };
+
 Date.locales["sr-cyr"] = {
 	month_names: ['јануар', 'фебруар', 'март', 'април', 'мај', 'јун', 'јул', 'август', 'септембар', 'октобар', 'новембар', 'децембар'],
 	month_names_short: ['јан.', 'феб.', 'мар.', 'апр.', 'мај', 'јун', 'јул', 'авг.', 'сеп.', 'окт.', 'нов.', 'дец.'],
@@ -882,10 +967,11 @@ Date.locales["sr-cyr"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["sr"] = {
 	month_names: ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', 'avgust', 'septembar', 'oktobar', 'novembar', 'decembar'],
 	month_names_short: ['jan.', 'feb.', 'mar.', 'apr.', 'maj', 'jun', 'jul', 'avg.', 'sep.', 'okt.', 'nov.', 'dec.'],
@@ -894,10 +980,11 @@ Date.locales["sr"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["sv"] = {
 	month_names: "januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december".split("_"),
 	month_names_short: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
@@ -911,10 +998,11 @@ Date.locales["sv"] = {
 			(b === 3) ? 'e' : 'e';
 		return output;
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["ta"] = {
 	month_names: 'ஜனவரி_பிப்ரவரி_மார்ச்_ஏப்ரல்_மே_ஜூன்_ஜூலை_ஆகஸ்ட்_செப்டெம்பர்_அக்டோபர்_நவம்பர்_டிசம்பர்'.split("_"),
 	month_names_short: 'ஜனவரி_பிப்ரவரி_மார்ச்_ஏப்ரல்_மே_ஜூன்_ஜூலை_ஆகஸ்ட்_செப்டெம்பர்_அக்டோபர்_நவம்பர்_டிசம்பர்'.split("_"),
@@ -923,7 +1011,7 @@ Date.locales["ta"] = {
 	date_suffix: function (date) {
 		return 'வது';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour >= 6 && hour <= 10) {
 			return " காலை";
 		} else if (hour >= 10 && hour <= 14) {
@@ -939,12 +1027,13 @@ Date.locales["ta"] = {
 		}
 	}
 };
+
 Date.locales["th"] = {
 	month_names: "มกราคม_กุม� าพันธ์_มีนาคม_เมษายน_พฤษ� าคม_มิถุนายน_กรกฎาคม_สิงหาคม_กันยายน_ตุลาคม_พฤศจิกายน_ธันวาคม".split("_"),
 	month_names_short: "มกรา_กุม� า_มีนา_เมษา_พฤษ� า_มิถุนา_กรกฎา_สิงหา_กันยา_ตุลา_พฤศจิกา_ธันวา".split("_"),
 	day_names: "อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัสบดี_ศุกร์_เสาร์".split("_"),
 	day_names_short: "อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัส_ศุกร์_เสาร์".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 12) {
 			return "ก่อนเที่ยง";
 		} else {
@@ -955,6 +1044,7 @@ Date.locales["th"] = {
 		return "";
 	}
 };
+
 Date.locales["tl-ph"] = {
 	month_names: "Enero_Pebrero_Marso_Abril_Mayo_Hunyo_Hulyo_Agosto_Setyembre_Oktubre_Nobyembre_Disyembre".split("_"),
 	month_names_short: "Ene_Peb_Mar_Abr_May_Hun_Hul_Ago_Set_Okt_Nob_Dis".split("_"),
@@ -963,10 +1053,11 @@ Date.locales["tl-ph"] = {
 	date_suffix: function (number) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["tr"] = {
 	month_names: "Ocak_Şubat_Mart_Nisan_Mayıs_Haziran_Temmuz_Ağustos_Eylül_Ekim_Kasım_Aralık".split("_"),
 	month_names_short: "Oca_Şub_Mar_Nis_May_Haz_Tem_Ağu_Eyl_Eki_Kas_Ara".split("_"),
@@ -982,10 +1073,11 @@ Date.locales["tr"] = {
 
 		return (suffixes[a] || suffixes[b] || suffixes[c]);
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["tzm-la"] = {
 	month_names: "innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir".split("_"),
 	month_names_short: "innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir".split("_"),
@@ -994,10 +1086,11 @@ Date.locales["tzm-la"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["tzm"] = {
 	month_names: "ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ".split("_"),
 	month_names_short: "ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ".split("_"),
@@ -1006,10 +1099,11 @@ Date.locales["tzm"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["uk"] = {
 	month_names: 'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split('_'),
 	month_names_short: "січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд".split("_"),
@@ -1018,7 +1112,7 @@ Date.locales["uk"] = {
 	date_suffix: function (date) {
 		return "-го";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "ночі";
 		} else if (hour < 12) {
@@ -1030,6 +1124,7 @@ Date.locales["uk"] = {
 		}
 	}
 };
+
 Date.locales["uz"] = {
 	month_names: "январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь".split("_"),
 	month_names_short: "янв_фев_мар_апр_май_июн_июл_авг_сен_окт_ноя_дек".split("_"),
@@ -1038,10 +1133,11 @@ Date.locales["uz"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["vi"] = {
 	month_names: "tháng 1_tháng 2_tháng 3_tháng 4_tháng 5_tháng 6_tháng 7_tháng 8_tháng 9_tháng 10_tháng 11_tháng 12".split("_"),
 	month_names_short: "Th01_Th02_Th03_Th04_Th05_Th06_Th07_Th08_Th09_Th10_Th11_Th12".split("_"),
@@ -1050,16 +1146,17 @@ Date.locales["vi"] = {
 	date_suffix: function (date) {
 		return "";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
+
 Date.locales["zh-cn"] = {
 	month_names: "一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月".split("_"),
 	month_names_short: "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
 	day_names: "星期日_星期一_星期二_星期三_星期四_星期五_星期六".split("_"),
 	day_names_short: "周日_周一_周二_周三_周四_周五_周六".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		var hm = hour * 100 + minute;
 		if (hm < 600) {
 			return "凌晨";
@@ -1080,12 +1177,13 @@ Date.locales["zh-cn"] = {
 
 	}
 };
+
 Date.locales["zh-tw"] = {
 	month_names: "一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月".split("_"),
 	month_names_short: "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
 	day_names: "星期日_星期一_星期二_星期三_星期四_星期五_星期六".split("_"),
 	day_names_short: "週日_週一_週二_週三_週四_週五_週六".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		var hm = hour * 100 + minute;
 		if (hm < 900) {
 			return "早上";
@@ -1104,3 +1202,4 @@ Date.locales["zh-tw"] = {
 	}
 
 };
+

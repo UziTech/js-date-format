@@ -4,7 +4,7 @@ Date.locales["ru"] = {
 	month_names_short: 'янв_фев_мар_апр_май_июнь_июль_авг_сен_окт_ноя_дек'.split('_'),
 	day_names: 'воскресенье_понедельник_вторник_среда_четверг_пятница_суббота'.split('_'),
 	day_names_short: "вс_пн_вт_ср_чт_пт_сб".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "ночи";
 		} else if (hour < 12) {

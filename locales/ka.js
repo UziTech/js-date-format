@@ -19,7 +19,7 @@ Date.locales["ka"] = {
 
 		return "-ე";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

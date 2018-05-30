@@ -79,7 +79,9 @@ Format Options
 - ff: Hundredths of a second
 - fff: Thousandths of a second
 - tt: am/pm
+- t: a/p
 - TT: AM/PM
+- T: A/P
 - zzzz: timezone (e.g. -05:00)
 - zzz: timezone (e.g. -5:00)
 - zz: timezone (e.g. -05)

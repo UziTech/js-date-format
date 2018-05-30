@@ -57,22 +57,22 @@ function testMethod(date, method, value, expected, test){
   <h1>Tests</h1>
   <script type="text/javascript">
     testFormat(null, "Year", "YYYY", 1900, 2100, function(i){
-      return String(i); 
+      return String(i);
     });
     testFormat(null, "Year", "YY", 1900, 2100, function(i){
-      return String(i % 100) 
+      return String(i % 100)
     });
-    testFormat(null, "Month", "M", 0, 11, function(i){
+    testFormat("1/1/2000", "Month", "M", 0, 11, function(i){
       return String(i + 1);
     });
-    testFormat(null, "Month", "MM", 0, 11, function(i){
+    testFormat("1/1/2000", "Month", "MM", 0, 11, function(i){
       i = i + 1;
       return String((i < 10)? "0" + i : i);
     });
-    testFormat(null, "Month", "MMM", 0, 11, function(i){
+    testFormat("1/1/2000", "Month", "MMM", 0, 11, function(i){
       return Date.locales.en.month_names_short[i];
     });
-    testFormat(null, "Month", "MMMM", 0, 11, function(i){
+    testFormat("1/1/2000", "Month", "MMMM", 0, 11, function(i){
       return Date.locales.en.month_names[i];
     });
     testFormat("1/1/2014", "Date", "D", 1, 31, function(i){
@@ -184,11 +184,14 @@ function testMethod(date, method, value, expected, test){
     testFormat(null, "Hours", "tt", 0, 23, function(i){
       return (i < 12? "am" : "pm");
     });
-    testFormat(null, "Hours", "TT", 0, 23, function(i){
-      return (i < 12? "AM" : "PM");
+    testFormat(null, "Hours", "t", 0, 23, function(i){
+      return (i < 12? "a" : "p");
     });
     testFormat(null, "Hours", "TT", 0, 23, function(i){
       return (i < 12? "AM" : "PM");
+    });
+    testFormat(null, "Hours", "T", 0, 23, function(i){
+      return (i < 12? "A" : "P");
     });
     testMethod(null, "Locale", "eo", "A.T.M.", function(d){
       d.setHours(1);

@@ -7,7 +7,7 @@ Date.locales["el"] = {
 	date_suffix: function (date) {
 		return "η";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour > 11) {
 			return isLower ? 'μμ' : 'ΜΜ';
 		} else {

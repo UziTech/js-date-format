@@ -7,7 +7,7 @@ Date.locales["ca"] = {
 	date_suffix: function (date) {
 		return "º";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

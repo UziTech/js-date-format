@@ -7,7 +7,7 @@ Date.locales["fo"] = {
 	date_suffix: function () {
 		return '.';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

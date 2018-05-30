@@ -7,7 +7,7 @@ Date.locales["sk"] = {
 	date_suffix: function (date) {
 		return ".";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

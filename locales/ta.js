@@ -7,7 +7,7 @@ Date.locales["ta"] = {
 	date_suffix: function (date) {
 		return 'வது';
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour >= 6 && hour <= 10) {
 			return " காலை";
 		} else if (hour >= 10 && hour <= 14) {

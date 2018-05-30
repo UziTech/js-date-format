@@ -7,7 +7,7 @@ Date.locales["uk"] = {
 	date_suffix: function (date) {
 		return "-го";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 4) {
 			return "ночі";
 		} else if (hour < 12) {

@@ -1,4 +1,4 @@
-/* language from http://momentjs.com */
+/* languages from http://momentjs.com */
 Date.locales["en"] = {
 	month_names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 	month_names_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -19,11 +19,11 @@ Date.locales["en"] = {
 			return "th";
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
-		if (hour < 12) {
-			return isLower ? "am" : "AM";
-		} else {
-			return isLower ? "pm" : "PM";
-		}
+	meridiem: function (hour, minute, isLower, isShort) {
+		var m = (hour < 12 ? "AM" : "PM");
+		m = (isLower ? m.toLowerCase() : m);
+		m = (isShort ? m[0] : m);
+
+		return m;
 	}
 };

@@ -24,7 +24,7 @@ Date.locales["cy"] = {
 
 		return output;
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

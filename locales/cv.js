@@ -7,7 +7,7 @@ Date.locales["cv"] = {
 	date_suffix: function (date) {
 		return "-мĕш";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

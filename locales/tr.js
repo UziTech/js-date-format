@@ -14,7 +14,7 @@ Date.locales["tr"] = {
 
 		return (suffixes[a] || suffixes[b] || suffixes[c]);
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

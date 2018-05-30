@@ -7,7 +7,7 @@ Date.locales["lt"] = {
 	date_suffix: function (date) {
 		return "-oji";
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

@@ -4,7 +4,7 @@ Date.locales["sq"] = {
 	month_names_short: "Jan_Shk_Mar_Pri_Maj_Qer_Kor_Gus_Sht_Tet_Nën_Dhj".split("_"),
 	day_names: "E Diel_E Hënë_E Martë_E Mërkurë_E Enjte_E Premte_E Shtunë".split("_"),
 	day_names_short: "Die_Hën_Mar_Mër_Enj_Pre_Sht".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return hour < 12 ? 'PD' : 'MD';
 	},
 	date_suffix: function (date) {

@@ -19,11 +19,11 @@ Date.locales["en-au"] = {
 			return "th";
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
-		if (hour < 12) {
-			return isLower ? "am" : "AM";
-		} else {
-			return isLower ? "pm" : "PM";
-		}
+	meridiem: function (hour, minute, isLower, isShort) {
+		var m = (hour < 12 ? "AM" : "PM");
+		m = (isLower ? m.toLowerCase() : m);
+		m = (isShort ? m[0] : m);
+
+		return m;
 	}
 };

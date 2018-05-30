@@ -7,7 +7,7 @@ Date.locales["nl"] = {
 	date_suffix: function (date) {
 		return ((date === 1 || date === 8 || date >= 20) ? 'ste' : 'de');
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };

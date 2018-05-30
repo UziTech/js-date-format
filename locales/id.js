@@ -4,7 +4,7 @@ Date.locales["id"] = {
 	month_names_short: "Jan_Feb_Mar_Apr_Mei_Jun_Jul_Ags_Sep_Okt_Nov_Des".split("_"),
 	day_names: "Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu".split("_"),
 	day_names_short: "Min_Sen_Sel_Rab_Kam_Jum_Sab".split("_"),
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		if (hour < 11) {
 			return 'pagi';
 		} else if (hour < 15) {

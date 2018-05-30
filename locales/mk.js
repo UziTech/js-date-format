@@ -23,7 +23,7 @@ Date.locales["mk"] = {
 			return '-ти';
 		}
 	},
-	meridiem: function (hour, minute, isLower) {
+	meridiem: function (hour, minute, isLower, isShort) {
 		return "";
 	}
 };
